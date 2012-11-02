@@ -17,7 +17,7 @@ Please send yours to snippets@tbaglobal.com prior to 5PM TODAY.
 
 Please remove your email signatures before sending, it crowds the snippets.
 
-And you can always login at http://snippets.buzzfeed.com
+And you can always login at http://snippets.tbaglobal.com
 
 
 Thanks,
