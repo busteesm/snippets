@@ -9,9 +9,19 @@ from dateutil import *
 from model import *
 
 REMINDER = """
-Hey nerd,
 
-The kids want to know what you're up to. Don't leave 'em hanging.
+All-
+It's the weekly Snippets reminder.
+
+Please send yours to snippets@tbaglobal.com prior to 5PM TODAY.
+
+Please remove your email signatures before sending, it crowds the snippets.
+
+And you can always login at http://snippets.buzzfeed.com
+
+
+Thanks,
+Snippets - The TBA Global Power Bot
 """
 
 class ReminderEmail(webapp.RequestHandler):
@@ -24,7 +34,7 @@ class ReminderEmail(webapp.RequestHandler):
 
 class OneReminderEmail(webapp.RequestHandler):
     def post(self):
-        mail.send_mail(sender="snippets <snippets@fssnippets.appspotmail.com>",
+        mail.send_mail(sender="snippets <snippets@tbaglobalsnippets.appspotmail.com>",
                        to=self.request.get('email'),
                        subject="Snippet time!",
                        body=REMINDER)
@@ -62,6 +72,6 @@ class OneDigestEmail(webapp.RequestHandler):
         logging.info(all_snippets)
         body = '\n\n\n'.join([self.__snippet_to_text(s) for s in all_snippets if s.user.email in following])
         if body:
-            self.__send_mail(user.email, 'https://fssnippets.appspot.com\n\n' + body)
+            self.__send_mail(user.email, 'https://tbaglobalsnippets.appspot.com\n\n' + body)
         else:
             logging.info(user.email + ' not following anybody.')
