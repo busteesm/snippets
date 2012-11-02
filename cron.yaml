@@ -1,9 +1,9 @@
 cron:
 - description: weekly reminder
   url: /reminderemail
-  schedule: every sunday 19:00
+  schedule: every friday 12:00
   timezone: America/New_York
 - description: weekly digest
   url: /digestemail
-  schedule: every monday 19:00
+  schedule: every friday 17:05
   timezone: America/New_York
